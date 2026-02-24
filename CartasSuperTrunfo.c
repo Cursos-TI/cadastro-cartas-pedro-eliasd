@@ -45,9 +45,12 @@ int main() {
   scanf("%f", &pibCarta2);
   printf("Digite o número de pontos turisticos da cidade:\n");
   scanf("%d", &pontoTuristicoCarta2);
-
+  
   // Área para exibição dos dados da cidade
-  printf("Cartas Cadastradas:\n");
+  printf("\nCartas Cadastradas:\n");
+  printf("Carta 1:\nEstado: %c\nCódigo: %s\nNome da cidade: %s\nPopulação: %d\nÁrea: %.2f KM²\nPIB: %.2f Bilhões de reais\nNúmero de pontos turisticos: %d\n", estadoCarta1, codigoCarta1, nomeCarta1, populacaoCarta1, areaCarta1, pibCarta1, pontoTuristicoCarta1);
+  printf("\nCarta 2:\nEstado: %c\nCódigo: %s\nNome da cidade: %s\nPopulação: %d\nÁrea: %.2f KM²\nPIB: %.2f Bilhões de reais\nNúmero de pontos turisticos: %d\n", estadoCarta2, codigoCarta2, nomeCarta2, populacaoCarta2, areaCarta2, pibCarta2, pontoTuristicoCarta2);
+
 
 return 0;
 } 
