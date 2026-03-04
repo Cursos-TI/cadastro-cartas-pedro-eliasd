@@ -9,7 +9,7 @@ int main() {
   char estadoCarta1, estadoCarta2;
   char codigoCarta1[4], codigoCarta2[4], nomeCarta1[50], nomeCarta2[50];
   int populacaoCarta1, populacaoCarta2, pontoTuristicoCarta1, pontoTuristicoCarta2;
-  float areaCarta1, areaCarta2, pibCarta1, pibCarta2;
+  float areaCarta1, areaCarta2, pibCarta1, pibCarta2, densidadePopCarta1, densidadePopCarta2, PibPerCaptaCarta1, PibPerCaptaCarta2;
   // Área para entrada de dados
   printf("Olá seja bem vindo ao cadastro de cartas do Super Trunfo\nVamos começar cadastrando os dados da Carta 1\n");
 
@@ -45,11 +45,20 @@ int main() {
   scanf("%f", &pibCarta2);
   printf("Digite o número de pontos turisticos da cidade:\n");
   scanf("%d", &pontoTuristicoCarta2);
+
+  //Area para o calculo das informações
+  //carta 1
+  densidadePopCarta1 = populacaoCarta1 / areaCarta1;
+  PibPerCaptaCarta1 = pibCarta1 / populacaoCarta1;
+
+  //carta 2
+  densidadePopCarta2 = populacaoCarta2 / areaCarta2;
+  PibPerCaptaCarta2 = pibCarta2 / populacaoCarta2;
   
-  // Área para exibição dos dados da cidade
+  // Área para exibição dos dados das cartas
   printf("\nCartas Cadastradas:\n");
-  printf("Carta 1:\nEstado: %c\nCódigo: %s\nNome da cidade: %s\nPopulação: %d\nÁrea: %.2f KM²\nPIB: %.2f Bilhões de reais\nNúmero de pontos turisticos: %d\n", estadoCarta1, codigoCarta1, nomeCarta1, populacaoCarta1, areaCarta1, pibCarta1, pontoTuristicoCarta1);
-  printf("\nCarta 2:\nEstado: %c\nCódigo: %s\nNome da cidade: %s\nPopulação: %d\nÁrea: %.2f KM²\nPIB: %.2f Bilhões de reais\nNúmero de pontos turisticos: %d\n", estadoCarta2, codigoCarta2, nomeCarta2, populacaoCarta2, areaCarta2, pibCarta2, pontoTuristicoCarta2);
+  printf("Carta 1:\nEstado: %c\nCódigo: %s\nNome da cidade: %s\nPopulação: %d\nÁrea: %.2f KM²\nPIB: %.2f Bilhões de reais\nNúmero de pontos turisticos: %d\nDensidade populacional: %.2f hab/km²\nPib per capta: %.2f reais\n", estadoCarta1, codigoCarta1, nomeCarta1, populacaoCarta1, areaCarta1, pibCarta1, pontoTuristicoCarta1, densidadePopCarta1, PibPerCaptaCarta1);
+  printf("\nCarta 2:\nEstado: %c\nCódigo: %s\nNome da cidade: %s\nPopulação: %d\nÁrea: %.2f KM²\nPIB: %.2f Bilhões de reais\nNúmero de pontos turisticos: %d\nDensidade populacional: %.2f hab/km²\nPib per capta: %.2f reais\n", estadoCarta2, codigoCarta2, nomeCarta2, populacaoCarta2, areaCarta2, pibCarta2, pontoTuristicoCarta2, densidadePopCarta1, PibPerCaptaCarta2);
 
 
 return 0;
